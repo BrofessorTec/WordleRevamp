@@ -30,8 +30,7 @@ namespace WordleRevamp
 
             while (continuePlaying)
             {
-                List<char> leftLetters = new List<char>();
-
+                List<char> leftLetters = new List<char>(26);
                 leftLetters.Add('A');
                 leftLetters.Add('B');
                 leftLetters.Add('C');
@@ -85,7 +84,7 @@ namespace WordleRevamp
                 Console.WriteLine("✓ = Correct Spot    ? = Incorrect Spot    X = Not in Word");
                 for (int i = 0; i < 6 && (guess != puzzleWord); i++)
                 {
-                    List<char> uncheckedLetters = new List<char>();
+                    List<char> uncheckedLetters = new List<char>(26);
 
                     uncheckedLetters.Add('A');
                     uncheckedLetters.Add('B');
@@ -114,14 +113,14 @@ namespace WordleRevamp
                     uncheckedLetters.Add('Y');
                     uncheckedLetters.Add('Z');
 
-                    List<char> answerLetters = new List<char>();
+                    List<char> answerLetters = new List<char>(5);
                     answerLetters.Add(puzzleWord[0]);
                     answerLetters.Add(puzzleWord[1]);
                     answerLetters.Add(puzzleWord[2]);
                     answerLetters.Add(puzzleWord[3]);
                     answerLetters.Add(puzzleWord[4]);
 
-                    List<char> perfectLetters = new List<char>();
+                    List<char> perfectLetters = new List<char>(5);
                     perfectLetters.Add(puzzleWord[0]);
                     perfectLetters.Add(puzzleWord[1]);
                     perfectLetters.Add(puzzleWord[2]);
